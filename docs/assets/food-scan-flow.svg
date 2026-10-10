@@ -1,0 +1,52 @@
+<svg width="1280" height="370" viewBox="0 0 1280 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="앱에서 찍은 음식 사진을 FastAPI 서버가 Google Vision으로 인식해 후보를 돌려주고, 사용자가 고른 음식의 영양 성분표를 앱의 영양 정보 DB에서 보여 준다">
+<title>Food Scan 동작 흐름</title>
+<line x1="16.0" y1="120.0" x2="1264.0" y2="120.0" stroke="#7d8590" stroke-width="1" stroke-opacity="0.28" stroke-linecap="round"/>
+<text x="40.0" y="60.0" fill="#7d8590" font-size="18" font-weight="800" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" transform="rotate(-90 40 60.0)" letter-spacing="1">앱</text>
+<line x1="16.0" y1="300.0" x2="1264.0" y2="300.0" stroke="#7d8590" stroke-width="1" stroke-opacity="0.28" stroke-linecap="round"/>
+<text x="40.0" y="210.0" fill="#2f81f7" font-size="18" font-weight="800" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" transform="rotate(-90 40 210.0)" letter-spacing="1">서버</text>
+<rect x="90.0" y="30.0" width="230.0" height="76.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<g transform="translate(106.0,56.0) scale(1.000)" stroke="#7d8590" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M2,7 h14 v11 h-14 z M16,10 l6,-3 v11 l-6,-3"/></g>
+<text x="225.0" y="57.0" fill="#7d8590" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">사진 촬영</text>
+<text x="225.0" y="82.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">Flutter 앱</text>
+<rect x="520.0" y="30.0" width="240.0" height="76.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<g transform="translate(536.0,56.0) scale(1.000)" stroke="#7d8590" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M12,2 a10,10 0 1 0 0.01,0 z M7,12 l3.5,3.5 L17,9"/></g>
+<text x="660.0" y="57.0" fill="#7d8590" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">음식 후보 선택</text>
+<text x="660.0" y="82.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">카테고리별 정리</text>
+<rect x="960.0" y="30.0" width="260.0" height="76.0" rx="14" fill="none" stroke="#2f81f7" stroke-opacity="0.9" stroke-width="1.8"/>
+<g transform="translate(976.0,56.0) scale(1.000)" stroke="#2f81f7" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5,2 h9 l5,5 v15 h-14 z M14,2 v5 h5 M8,12 h8 M8,16 h8"/></g>
+<text x="1110.0" y="57.0" fill="#2f81f7" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">영양 성분표</text>
+<text x="1110.0" y="82.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">nutrition.json</text>
+<path d="M760.0,68.0 L954.0,68.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M946.1,72.2 L954.0,68.0 L946.1,63.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="857.0" y="50.0" fill="#7d8590" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">선택한 음식 조회</text>
+<rect x="90.0" y="170.0" width="230.0" height="80.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<g transform="translate(106.0,198.0) scale(1.000)" stroke="#7d8590" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M3,4 h18 v16 h-18 z M3,16 l5,-5 l4,4 l3,-3 l6,6 M15,8 a1.5,1.5 0 1 0 0.01,0 z"/></g>
+<text x="225.0" y="199.0" fill="#7d8590" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">이미지 업로드</text>
+<text x="225.0" y="224.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">POST /upload</text>
+<rect x="400.0" y="170.0" width="260.0" height="80.0" rx="14" fill="none" stroke="#2f81f7" stroke-opacity="0.9" stroke-width="1.8"/>
+<g transform="translate(416.0,198.0) scale(1.000)" stroke="#2f81f7" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M10,3 a7,7 0 1 0 0.01,0 z M15,15 l6,6"/></g>
+<text x="550.0" y="199.0" fill="#2f81f7" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">이미지 인식</text>
+<text x="550.0" y="224.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">Google Vision API</text>
+<rect x="740.0" y="170.0" width="240.0" height="80.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<g transform="translate(756.0,198.0) scale(1.000)" stroke="#7d8590" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5,2 h9 l5,5 v15 h-14 z M14,2 v5 h5 M8,12 h8 M8,16 h8"/></g>
+<text x="880.0" y="199.0" fill="#7d8590" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">후보 목록</text>
+<text x="880.0" y="224.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">label · score JSON</text>
+<path d="M205.0,106.0 L205.0,164.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200.8,156.1 L205.0,164.0 L209.2,156.1" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="242.0" y="136.0" fill="#7d8590" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">업로드</text>
+<path d="M320.0,210.0 L394.0,210.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M386.1,214.2 L394.0,210.0 L386.1,205.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M660.0,210.0 L734.0,210.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M726.1,214.2 L734.0,210.0 L726.1,205.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M860.0,170.0 L860.0,136.0 L640.0,136.0 L640.0,112.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M644.2,119.9 L640.0,112.0 L635.8,119.9" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="750.0" y="152.0" fill="#7d8590" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">JSON 응답</text>
+<rect x="346.6" y="266.0" width="84.8" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="389.0" y="281.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace">/upload</text>
+<rect x="441.4" y="266.0" width="118.4" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="500.6" y="281.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace">/upload/web</text>
+<rect x="569.8" y="266.0" width="143.6" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="641.6" y="281.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace">/upload/web_ko</text>
+<text x="860.0" y="280.0" fill="#7d8590" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">웹 엔티티 결과는 한국어로 번역</text>
+<text x="640.0" y="338.0" fill="#7d8590" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">역할 분담: 서버와 API 연동 김유석(팀장) · 앱 화면과 영양 DB 팀원 3명</text>
+</svg>

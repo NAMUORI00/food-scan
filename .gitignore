@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+FASTAPI_SERVER/vision_fastapi-master/me/
+
+# IDE
+.idea/
+.vscode/
+
+# Secrets and runtime files
+FASTAPI_SERVER/vision_fastapi-master/auth-key/*.json
+FASTAPI_SERVER/vision_fastapi-master/file/
